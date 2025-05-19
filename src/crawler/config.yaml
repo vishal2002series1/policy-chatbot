@@ -1,0 +1,9 @@
+crawl_url: "https://investor.vanguard.com"
+max_pages: 50
+output_dir: "././data/raw"
+user_agent: "policy-chatbot-crawler/1.0"
+agent_id: "GV4FOBGCCV"
+region: "us-east-1"
+s3_bucket: "poc-vishal-data"
+s3_prefix: "crawl/"
+agent_alias_id: "JVG8LLL9L9"
