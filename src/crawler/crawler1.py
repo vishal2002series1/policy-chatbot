@@ -7,6 +7,24 @@ import boto3
 import hashlib
 import time
 import uuid
+from phoenix.otel import register
+
+# If using YAML config:
+import yaml
+with open("config.yaml") as f:
+    config = yaml.safe_load(f)
+arize_cfg = config["arize"]
+
+# Set Arize Phoenix environment variables
+os.environ["PHOENIX_COLLECTOR_ENDPOINT"] = arize_cfg["endpoint"]
+os.environ["PHOENIX_CLIENT_HEADERS"] = f"api_key={arize_cfg['api_key']}"
+
+# Register Phoenix tracing
+tracer_provider = register(
+    project_name=arize_cfg["project_name"],
+    auto_instrument=True
+)
+print(f"✅ Arize Phoenix tracing initialized for project: {arize_cfg['project_name']}")
 
 def load_config():
     with open('config.yaml', 'r') as f:
@@ -25,7 +43,8 @@ def is_term_insurance_page(text, agent_id, agent_alias_id, region):
             agentId=agent_id,
             agentAliasId=agent_alias_id,
             sessionId=session_id,
-            inputText=prompt
+            inputText=prompt,
+            enableTrace = True
         )
         completion = ""
         for event in response['completion']:

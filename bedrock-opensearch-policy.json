@@ -1,0 +1,24 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Principal": {
+          "Service": "bedrock.amazonaws.com"
+        },
+        "Action": [
+          "aoss:DescribeCollectionItems",
+          "aoss:BatchGetCollection",
+          "aoss:DescribeCollection",
+          "aoss:ReadDocument",
+          "aoss:WriteDocument",
+          "aoss:CreateIndex",
+          "aoss:UpdateIndex",
+          "aoss:ListIndexes"
+        ],
+        "Resource": [
+          "arn:aws:aoss:us-east-1:258574424891:collection/zboh61qa5fvxmrq2tswk"
+        ]
+      }
+    ]
+  }

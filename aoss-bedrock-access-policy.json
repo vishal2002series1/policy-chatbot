@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": [
+          "aoss:BatchGetCollection",
+          "aoss:DescribeCollection",
+          "aoss:BatchGetVpcEndpoint",
+          "aoss:CreateIndex",
+          "aoss:ReadDocument",
+          "aoss:WriteDocument",
+          "aoss:UpdateIndex",
+          "aoss:DeleteCollection",
+          "aoss:ListCollections",
+          "aoss:ListIndexes",
+          "aoss:ListVpcEndpoints"
+        ],
+        "Resource": "arn:aws:aoss:us-east-1:258574424891:collection/zboh61qa5fvxmrq2tswk"
+      }
+    ]
+  }

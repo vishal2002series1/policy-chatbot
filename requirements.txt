@@ -1,0 +1,7 @@
+requests
+beautifulsoup4
+PyYAML
+boto3
+# hashlib
+arize-phoenix-otel
+openinference-instrumentation-bedrock

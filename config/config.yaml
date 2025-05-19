@@ -1,0 +1,9 @@
+arize:
+  api_key: "YOUR_ARIZE_API_KEY"
+  endpoint: "https://app.phoenix.arize.com"
+  project_name: "policy-chatbot"
+
+bedrock:
+  region: "us-east-1"
+  agent_id: "GV4FOBGCCV"
+  agent_alias_id: "JVG8LLL9L9"

@@ -7,3 +7,8 @@ region: "us-east-1"
 s3_bucket: "poc-vishal-data"
 s3_prefix: "crawl/"
 agent_alias_id: "JVG8LLL9L9"
+arize_api_key: "1d22d04280f76271e68:d6474ed"
+arize:
+  api_key: "1d22d04280f76271e68:d6474ed"
+  endpoint: "https://app.phoenix.arize.com"
+  project_name: "policy-chatbot"
